@@ -1,0 +1,47 @@
+{
+  "firstElement": {
+    "type": "text",
+    "id":"firstname",
+    "name": "firstname",
+    "placeHolder": "Enter your firstname",
+    "tooltipText": "Enter your firstname here",
+    "label": "First Name",
+    "nextId": "lastname"
+  },
+  "secondElement": {
+    "type": "text",
+    "id":"lastname",
+    "name": "lastname",
+    "placeHolder": "Enter your lastname",
+    "tooltipText": "Enter your lastname here",
+    "label": "Last Name",
+    "nextId": "email"
+  },
+  "thirdElement": {
+    "type": "text",
+    "id":"email",
+    "name": "email",
+    "placeHolder": "Enter your email",
+    "tooltipText": "Enter your email here",
+    "label": "Email",
+    "nextId": "contactnumber"
+  },
+  "fourthElement": {
+    "type": "text",
+    "id":"contactnumber",
+    "name": "contactnumber",
+    "placeHolder": "Enter your contact number",
+    "tooltipText": "Enter your contactnumber here",
+    "label": "Contact Number",
+    "nextId": "submit"
+  },
+  "fifthElement": {
+    "type": "submit",
+    "id":"submit",
+    "name": "submit",
+    "placeHolder": "",
+    "tooltipText": "Click on submit button to complete the form",
+    "label": "",
+    "nextId": "submit"
+  }
+}

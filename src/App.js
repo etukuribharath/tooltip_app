@@ -10,7 +10,7 @@ function App() {
     const [data1, setData] = useState(data);
 
     useEffect(() => {
-        let b = document.getElementById('tooltip1');
+        let b = document.getElementById(data1[Object.keys(data1)[0]].id);
         setInElem(b);
         setData(data1);
         let a = Object.keys(data1);
