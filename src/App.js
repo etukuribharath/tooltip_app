@@ -31,7 +31,7 @@ function App() {
    return <div className="name" onClick={()=>{show(data[e].id, data[e].nextId)}}>
       NAME
       <div className="tooltip" id={data[e].id}>
-        {data[e].id}
+        {data[e].tooltipText}
       </div>
     </div>
   })

@@ -2,16 +2,19 @@
   "firstElement": {
     "id": "tooltip1",
     "nextId": "tooltip2",
-    "previousId": "tooltip1"
+    "previousId": "tooltip1",
+    "tooltipText": "Tooltip for first ID"
   },
   "secondElement": {
     "id": "tooltip2",
     "nextId": "tooltip3",
-    "previousId": "tooltip1"
+    "previousId": "tooltip1",
+    "tooltipText": "Tooltip for second ID"
   },
   "thirdElement": {
     "id": "tooltip3",
     "nextId": "tooltip3",
-    "previousId": "tooltip2"
+    "previousId": "tooltip2",
+    "tooltipText": "Tooltip for third ID"
   }
 }
