@@ -3,18 +3,35 @@
     "id": "tooltip1",
     "nextId": "tooltip2",
     "previousId": "tooltip1",
-    "tooltipText": "click on tooltip1"
+    "tooltipText": "click on tooltip1",
+    "DisplayText": "Step1"
   },
   "secondElement": {
     "id": "tooltip2",
     "nextId": "tooltip3",
     "previousId": "tooltip1",
-    "tooltipText": "click on tooltip2"
+    "tooltipText": "click on tooltip2",
+    "DisplayText": "Step2"
   },
   "thirdElement": {
     "id": "tooltip3",
-    "nextId": "tooltip3",
+    "nextId": "tooltip4",
     "previousId": "tooltip2",
-    "tooltipText": "click on tooltip3"
+    "tooltipText": "click on tooltip3",
+    "DisplayText": "Step3"
+  },
+  "fourthElement": {
+    "id": "tooltip4",
+    "nextId": "tooltip5",
+    "previousId": "tooltip3",
+    "tooltipText": "click on tooltip4",
+    "DisplayText": "Step4"
+  },
+  "fifthElement": {
+    "id": "tooltip5",
+    "nextId": "tooltip5",
+    "previousId": "tooltip4",
+    "tooltipText": "click on tooltip5",
+    "DisplayText": "Step5"
   }
 }

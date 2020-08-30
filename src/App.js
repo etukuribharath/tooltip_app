@@ -1,72 +1,57 @@
-import React,{useEffect,useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
 import './App.css';
+import './registerForm.css';
 import data from './data';
+import RegisterForm from './RegisterForm'
 
 function App() {
-  const [inElem,setInElem]=useState(null);
-  const [data1,setData]=useState(data);
-  useEffect(() => {
-    let b = document.getElementById('tooltip1');
-    setInElem(b);
-    setData(data1);
-    // let data1= data;
-    console.log(data1.firstElement);
-    console.log(data1);
-    let a = Object.keys(data1);
-        a.map((e)=>{
-      console.log(data1[e])
-    })
-  },[]);
-  function show (elem1,elem2) {
-    let a = document.getElementById(elem1);
-    let b = document.getElementById(elem2);
-    b.style.display="block";
-    a.style.display="";
-  }
+    const [inElem, setInElem] = useState(null);
+    const [data1, setData] = useState(data);
 
-  // let b = document.getElementById('tooltip1');
-  // b?b.style.display="block":null;
-  function dom(){
-  let elements = Object.keys(data1).map((e)=>{
-   return <div className="name" onClick={()=>{show(data[e].id, data[e].nextId)}}>
-       {data[e].id}
-      <div className="tooltip" id={data[e].id}>
-        {data[e].tooltipText}
-      </div>
-    </div>
-  })
-    return elements;
-  }
+    useEffect(() => {
+        let b = document.getElementById('tooltip1');
+        setInElem(b);
+        setData(data1);
+        let a = Object.keys(data1);
+        a.map((e) => {
+            console.log(data1[e])
+        });
+        if (inElem) {
+            inElem.style.display = "block";
+        }
+    }, []);
 
-  return (
-    <div className="App1">
-      <header className="App-header">
-        Tooltip Player
-      </header>
-      {dom()}
-      {/*<div className="name" onClick={()=>{show('tooltip1', 'tooltip2')}}>*/}
-        {/*NAME*/}
-        {/*<div className="tooltip" id="tooltip1">*/}
-          {/*PROFILE DETAILS*/}
-        {/*</div>*/}
-      {/*</div>*/}
+    function show(elem1, elem2) {
+        let a = document.getElementById(elem1);
+        let b = document.getElementById(elem2);
+        b.style.display = "block";
+        a.style.display = "";
+    }
 
-      {/*<div className="name" onClick={()=>{show('tooltip2', 'tooltip3')}}>*/}
-        {/*NAME 2*/}
-        {/*<div className="tooltip" id="tooltip2">*/}
-          {/*PROFILE DETAILS 2*/}
-        {/*</div>*/}
-      {/*</div>*/}
+    function dom() {
+        let elements = Object.keys(data1).map((e) => {
+            return <div className="name" onClick={() => {show(data[e].id, data[e].nextId)}}>
+                {data[e].DisplayText}
+                <div className="tooltip" id={data[e].id}>
+                    {data[e].tooltipText}
+                </div>
+            </div>
+        })
+        return elements;
+    }
 
-      {/*<div className="name" onClick={()=>{show('tooltip3', 'tooltip3')}}>*/}
-        {/*NAME 3*/}
-        {/*<div className="tooltip" id="tooltip3">*/}
-          {/*PROFILE DETAILS 3*/}
-        {/*</div>*/}
-      {/*</div>*/}
-      { inElem?inElem.style.display="block":null}
-    </div>
-  );
+    return (
+        <div style={{backgroundColor: 'red', display:'inline'}}>
+            <div className="App">
+                <header className="App-header">
+                    Tooltip Player
+                </header>
+                <div>{dom()}</div>
+                { inElem?(inElem.style.display):undefined}
+            </div>
+        </div>
+    );
 }
 
 export default App;

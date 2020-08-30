@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+    width:100%;
+    background-color: #f2f2f2;
+    display: inline-block;
 }
 
 .App-logo {
@@ -41,6 +44,10 @@
   float:left;
   margin:100px;
   border:1px solid black;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    position:relative;
 }
 
 
@@ -51,4 +58,6 @@
   height:50px;
   border:1px solid black;
   display:none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
 }
