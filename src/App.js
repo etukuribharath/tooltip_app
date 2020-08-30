@@ -17,21 +17,34 @@ function App() {
         a.map((e) => {
             console.log(data1[e])
         });
-        if (inElem) {
-            inElem.style.display = "block";
+        if (b) {
+            b.style.display = "block";
         }
     }, []);
 
-    function show(elem1, elem2) {
+    function show(elem1, elem2,index) {
+        if(Object.keys(data1).length!=index+1){
         let a = document.getElementById(elem1);
         let b = document.getElementById(elem2);
-        b.style.display = "block";
-        a.style.display = "";
+        b.style.display = 'block';
+        a.style.display = '';
+        } else{
+            let a = document.getElementById(elem2);
+            let b = document.getElementById("myModal");
+            a.style.display = '';
+            b.style.display = 'block';
+            // alert("Process Flow Completed");
+
+        }
+    }
+    function closeModal(){
+        let span = document.getElementById("myModal");
+        span.style.display = "none";
     }
 
     function dom() {
-        let elements = Object.keys(data1).map((e) => {
-            return <div className="name" onClick={() => {show(data[e].id, data[e].nextId)}}>
+        let elements = Object.keys(data1).map((e,index) => {
+            return <div className="name" onClick={() => {show(data[e].id, data[e].nextId, index)}}>
                 {data[e].DisplayText}
                 <div className="tooltip" id={data[e].id}>
                     {data[e].tooltipText}
@@ -41,6 +54,7 @@ function App() {
         return elements;
     }
 
+
     return (
         <div style={{backgroundColor: 'red', display:'inline'}}>
             <div className="App">
@@ -48,7 +62,15 @@ function App() {
                     Tooltip Player
                 </header>
                 <div>{dom()}</div>
-                { inElem?(inElem.style.display):undefined}
+                {/*{ inElem?(inElem.style.display='block'):undefined}*/}
+            </div>
+            <div id="myModal" className="modal">
+
+                <div className="modal-content">
+                    <span className="close" onClick={()=>closeModal()}>&times;</span>
+                    <p>Process Flow Completed</p>
+                </div>
+
             </div>
         </div>
     );
