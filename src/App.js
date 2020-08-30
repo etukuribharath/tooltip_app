@@ -29,7 +29,7 @@ function App() {
   function dom(){
   let elements = Object.keys(data1).map((e)=>{
    return <div className="name" onClick={()=>{show(data[e].id, data[e].nextId)}}>
-      NAME
+       {data[e].id}
       <div className="tooltip" id={data[e].id}>
         {data[e].tooltipText}
       </div>
