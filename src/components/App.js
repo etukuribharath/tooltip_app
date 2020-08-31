@@ -39,6 +39,13 @@ function App() {
         }
     }
 
+    function prev(currentElement,PrevElement){
+        let a = document.getElementById(currentElement);
+        let b = document.getElementById(PrevElement);
+        a.style.display = '';
+        b.style.display = 'block';
+    }
+
     function closeModal() {
         let span = document.getElementById("myModal");
         span.style.display = "none";
@@ -46,13 +53,16 @@ function App() {
 
     function dom() {
         let elements = Object.keys(data1).map((e, index) => {
-            return <div className="name" onClick={() => {
-                show(data[e].id, data[e].nextId, index)
-            }}>
-                {data[e].DisplayText}
+            return <div><div className="name">
+                <div  onClick={() => {show(data[e].id, data[e].nextId, index)}}>{data[e].DisplayText}</div>
                 <div className="tooltip" id={data[e].id}>
-                    {data[e].tooltipText}
+                    <div>{data[e].tooltipText}</div>
+                    <input type="button" id={data[e].id} value="Previous Step" placeholder={data[e].id}
+                           onClick={() => prev(data[e].id, data[e].previousId)}/>
                 </div>
+
+            </div>
+
             </div>
         });
         return elements;

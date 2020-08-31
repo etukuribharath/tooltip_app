@@ -19,6 +19,13 @@ function RegisterForm() {
         b.style.display = 'block';
     }
 
+    function prev(currentElement,PrevElement){
+        let a = document.getElementById(currentElement);
+        let b = document.getElementById(PrevElement);
+        a.style.display = '';
+        b.style.display = 'block';
+    }
+
     function form() {
         return Object.keys(formdata).map((e) => {
             return (
@@ -32,6 +39,8 @@ function RegisterForm() {
                     <div id={formdata[e].id} className="registerFormtooltip">
                         <div className="tooltip-content">
                             <span>{formdata[e].tooltipText}</span>
+                            {/*<input type="button" id={""} name={formdata[e].name} placeholder={formdata[e].placeHolder}*/}
+                                   {/*onFocus={() => show(formdata[e].id, formdata[e].nextId)}/>*/}
                         </div>
                     </div>
                 </div>
