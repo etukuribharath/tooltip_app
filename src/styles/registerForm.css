@@ -25,36 +25,22 @@ input[type=submit]:hover {
 
 .registerForm {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: aliceblue;
     padding: 20px;
     margin: auto;
     width: 40%;
 }
 
 .registerFormtooltip{
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    /*z-index: 1; !* Sit on top *!*/
-    /*padding-top: 100px; !* Location of the box *!*/
-    /*left: 0;*/
-    /*top: 0;*/
-    /*width: 100%; !* Full width *!*/
-    /*height: 100%; !* Full height *!*/
-    overflow: auto; /* Enable scroll if needed */
-    background-color: white; /* Fallback color */
-    background-color: white; /* Black w/ opacity */
-    margin:0px 10px 10px 00px;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: white;
+    margin:0px 10px 10px 10px;
     width:200px;
     height:100px;
     float:right;
-    /*position:absolute;*/
-    /*margin:0px 10px 10px 10px;*/
-    /*width:200px;*/
-    /*height:50px;*/
-    /*border:1px solid black;*/
-    /*display:none;*/
     border-radius: 5px;
-    /*background-color: beige;*/
 }
 
 .tooltip-content {

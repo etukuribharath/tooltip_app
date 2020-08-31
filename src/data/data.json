@@ -3,35 +3,35 @@
     "id": "tooltip1",
     "nextId": "tooltip2",
     "previousId": "tooltip1",
-    "tooltipText": "click on tooltip1",
+    "tooltipText": "Enter the value in firstname textfield",
     "DisplayText": "Step1"
   },
   "secondElement": {
     "id": "tooltip2",
     "nextId": "tooltip3",
     "previousId": "tooltip1",
-    "tooltipText": "click on tooltip2",
+    "tooltipText": "Enter the value in lastname textfield",
     "DisplayText": "Step2"
   },
   "thirdElement": {
     "id": "tooltip3",
     "nextId": "tooltip4",
     "previousId": "tooltip2",
-    "tooltipText": "click on tooltip3",
+    "tooltipText": "Enter the value in contact number field",
     "DisplayText": "Step3"
   },
   "fourthElement": {
     "id": "tooltip4",
     "nextId": "tooltip5",
     "previousId": "tooltip3",
-    "tooltipText": "click on tooltip4",
+    "tooltipText": "Enter the value in emailID field",
     "DisplayText": "Step4"
   },
   "fifthElement": {
     "id": "tooltip5",
-    "nextId": "tooltip5",
+    "nextId": "tooltip1",
     "previousId": "tooltip4",
-    "tooltipText": "click on tooltip5",
+    "tooltipText": "click on submit button to submit the register form",
     "DisplayText": "Step5"
   }
 }
