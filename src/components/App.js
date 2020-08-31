@@ -59,7 +59,7 @@ function App() {
                         show(data[e].id, data[e].nextId, index)
                     }}>{data[e].DisplayText}</div>
                     <div className="tooltip" id={data[e].id}>
-                        <span>Step {index + 1}/{Object.keys(data1).length}</span>
+                        <span style={{backgroundColor:'lightblue',color:'white',padding:'0px 5px 0px 5px'}}>Step {index + 1}/{Object.keys(data1).length}</span>
                         <div>{data[e].tooltipText}</div>
                         {index != 0 &&
                         <input type="button" id={data[e].id} value="Previous Step" placeholder={data[e].id}
